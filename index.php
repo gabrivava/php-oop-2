@@ -38,3 +38,6 @@ $users = [
     new User('Stefano', 'fanoSte', 'mail.mail@gmial.com', 'HDFTY868')
 ];
 var_dump($users);
+
+var_dump($users[1]->setCreditCard('saojosjao'));
+var_dump($users[1]->getCreditCard());
