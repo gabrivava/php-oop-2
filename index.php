@@ -41,3 +41,21 @@ var_dump($users);
 
 var_dump($users[1]->setCreditCard('saojosjao'));
 var_dump($users[1]->getCreditCard());
+
+// classe carta di credito
+class CreditCard {
+    protected $cardNumber;
+    protected $cvv;
+    protected $expiry;
+
+    function __construct(string $cardNumber, int $cvv, string $expiry) {
+        $this->cardNumber = $cardNumber;
+        $this->cvv = $cvv;
+        $this->expiry = $expiry;
+    }
+}
+
+# Test CreditCard class
+$cartaNuova = new CreditCard("1111-2222-4444-2222", 747, "01/26");
+
+var_dump($cartaNuova);
