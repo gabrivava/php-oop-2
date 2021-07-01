@@ -1,0 +1,24 @@
+/* common */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(203, 255, 196);
+}
+/* prodotti */
+.shirts {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    .shirt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: bisque;
+        margin: 1rem;
+        width: 200px;
+    }
+}
+

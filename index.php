@@ -21,14 +21,14 @@ $shirts = [
     new Cloth('Shirt', 'Supreme', 59.99, 'lorem shirt', 'M', 'White'),
     new Cloth('Shirt', 'Youth Club', 29.99, 'lorem shirt', 'L', 'Grey'),
 ];
-var_dump($shirts);
+// var_dump($shirts);
 $cars = [
     new Car('Model X', 'Tesla', 300000, 'lorem car', 2500, 'Electric'),
     new Car('Baracca', 'Subaru', 200000, 'lorem car', 2200, 'Gasoline'),
     new Car('Megane', 'Renault', 100000, 'lorem car', 2300, 'Diesel'),
     new Car('Panda', 'Fiat', 3000001, 'lorem car', 2800, 'Gas')
 ];
-var_dump($cars);
+// var_dump($cars);
 
 // aggiungo utenti
 $users = [
@@ -37,10 +37,10 @@ $users = [
     new User('Ugo', 'Ugobossino', 'mail.mail@gmial.com', '6423979RF'),
     new User('Stefano', 'fanoSte', 'mail.mail@gmial.com', 'HDFTY868')
 ];
-var_dump($users);
+//var_dump($users);
 
-var_dump($users[1]->setCreditCard('saojosjao'));
-var_dump($users[1]->getCreditCard());
+// var_dump($users[1]->setCreditCard('saojosjao'));
+// var_dump($users[1]->getCreditCard());
 
 // classe carta di credito
 class CreditCard {
@@ -58,4 +58,49 @@ class CreditCard {
 # Test CreditCard class
 $cartaNuova = new CreditCard("1111-2222-4444-2222", 747, "01/26");
 
-var_dump($cartaNuova);
+// var_dump($cartaNuova);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/app.css">
+</head>
+
+<body>
+    
+    <div class="prodotti">
+
+        <div class="shirts">
+            
+            <h1>Shirts</h1>
+
+            <!-- PHP -->
+            <?php
+                foreach ($shirts as $shirt) : ?>
+
+                    <div class="shirt">
+                        <p> marca: <?=$shirt->marca?></p>
+                        <p> prezzo: <?=$shirt->price?>$</p>
+                    </div>
+                    
+                    
+                <?php endforeach;     
+            ?>
+
+        </div>
+        <div class="cars">
+
+            
+
+        </div>
+
+    </div>
+
+</body>
+</html>
